@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Levon Khorasandzhian
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Levon Khorasandzhian} \\ \vspace{1pt}
+    \href{mailto:levon.kh228@gmail.com}{{levon.kh228@gmail.com}} $|$ 
+    \href{https://t.me/yungflaeva}{{t.me/yungflaeva}} $|$
+    \href{https://github.com/lkhorasandzhian}{{github.com/lkhorasandzhian}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Higher School of Economics}{Moscow, Russia}
+      {Bachelor of Computer Science}{Aug. 2021 -- June 2025}
+      \resumeItem
+    {\textbf{Main Courses}:
+    \begin{enumerate}
+        \item Algorithms and Data Structures
+        \item Software Systems Architecture Design
+        \item Distributed Databases and Data Warehouses
+        \item C\# Programming
+        \item Data analysis in Python
+        \item Development of Web Applications in JavaScript
+        \item Functional and Logic Programming in F\# and Prolog
+        \item Operation Systems
+        \item Computer System Architecture
+        \item Software Quality Assurance and Testing
+    \end{enumerate}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\textbf{Restaurant Order Processing System}} $|$ \emph{Java, Spring, JavaDoc}}{}
+          \resumeItemListStart
+            \resumeItem{consists of two microservices: authorization microservice \& order processing microservice}
+            \resumeItem{Task from course "Software Design"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/kpo-gym}{\textbf{Gym Manager}} $|$ \emph{Java, Spring}}{}
+          \resumeItemListStart
+            \resumeItem{API for managing gym workouts}
+            \resumeItem{Task from course "Software Design"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/valid_sudoku}{\textbf{Valid Sudoku}} $|$ \emph{Flutter, Dart, cross-platform application for Windows/MacOS/Linux}}{}
+          \resumeItemListStart
+            \resumeItem{Backtracking algorithm is used to find solutions to a user task during validation process}
+            \resumeItem{Personal project for educational purposes}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/notepad-shell}{\textbf{Notepad Shell}} $|$ \emph{C\#, Windows Forms}}{}
+          \resumeItemListStart
+            \resumeItem{The program is a text notepad for working with text documents}
+            \resumeItem{Task from course "C\# Programming"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/message-service-simulator}{\textbf{Message Service Simulator}} $|$ \emph{C\#, ASP.Net Core}}{}
+          \resumeItemListStart
+            \resumeItem{Simple web application generating users with random names, emails and messages to each other}
+            \resumeItem{Task from course "C\# Programming"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/fp-compiler-lab-mosmetro}{\textbf{The New Programming Language with its own Interpreter}} $|$ \emph{F\#, FParsec, GitHub collaboration features}}{}
+          \resumeItemListStart
+            \resumeItem{Language and Interpreter were developed by a team of three people including me}
+            \resumeItem{Task from course "Functional and Logic Programming in F\# and Prolog"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/research-project}{\textbf{Research Project}} $|$ \emph{Python, Data Analysis, Web Scrapping}}{}
+          \resumeItemListStart
+            \resumeItem{Bank marketing strategy data analysis and web-scaping of nike.com}
+            \resumeItem{Task from course "Data analysis in Python"}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%---------competitions-------------
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C\#, Java, C++/C, Python, F\#, Dart, JavaScript, HTML/CSS} \\
+     \textbf{Frameworks}{: .NET, Flutter, Spring, JUnit} \\
+     \textbf{Developer Tools}{: Git, IntelliJ IDEA, CLion, VS Code, Visual Studio, Postman, Azure Data Studio, Visual Paradigm, Jupyter Notebook} \\
+     \textbf{Libraries}{: Pandas, NumPy, SymPy, Matplotlib, Seaborn, LINQ}
+    }}
+ \end{itemize}
+
+%------------LANGUAGES
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{English}{: B2} \\
+     \textbf{Russian}{: Native}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
