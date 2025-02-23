@@ -1,0 +1,220 @@
+%-------------------------
+% Resume in Latex
+% Author : Levon Khorasandzhian
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{tabularx}
+\setlength{\footskip}{4.08003pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Левон Хорасанджян} \\ \vspace{1pt}
+    \href{mailto:levon.kh228@gmail.com}{\underline{levon.kh228@gmail.com}} $|$ 
+    \href{https://t.me/yungflaeva}{\underline{t.me/yungflaeva}} $|$
+    \href{https://github.com/lkhorasandzhian}{\underline{github.com/lkhorasandzhian}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Высшая Школа Экономики}{Москва, Россия}
+      {Бакалавриат факультета компьютерных наук}{Август 2021 -- Июнь 2025}
+      \resumeItem
+    {\textbf{Основные курсы (GPA 8.05/10)}:
+    \begin{enumerate}
+        \item Алгоритмы и структуры данных
+        \item Архитектура программных систем
+        \item Распределенные базы данных и хранилища
+        \item Программирование на C\#
+        \item Анализ данных на Python
+        \item Разработка веб-приложений на JavaScript
+        \item Функциональное и логическое программирование на F\# и Prolog
+        \item Операционные системы
+        \item Архитектура компьютерных систем
+        \item Контроль качества программного обеспечения и тестирование
+    \end{enumerate}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Проекты}
+    \resumeSubHeadingListStart
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/aton-web-api}{\underline{\textbf{Aton Web API}}} $|$ \emph{C\#, ASP.Net Core 8.0}}{Август 1, 2024}
+          \resumeItemListStart
+            \resumeItem{Веб-сервис на .NET Core 8.0, реализующий API CRUD методы для сущности Пользователи, доступ через Swagger}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\underline{\textbf{Restaurant Order Processing System}}} $|$ \emph{Java, Spring, JavaDoc}}{Май 29, 2023}
+          \resumeItemListStart
+            \resumeItem{Состоит из двух микросервисов: авторизация и обработка заказов}
+            \resumeItem{Задание по курсу "Проектирование ПО"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/kpo-gym}{\underline{\textbf{Gym Manager}}} $|$ \emph{Java, Spring}}{Июнь 17, 2023}
+          \resumeItemListStart
+            \resumeItem{API для управления тренировками в спортзале}
+            \resumeItem{Задание по курсу "Проектирование ПО"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/valid_sudoku}{\underline{\textbf{Valid Sudoku}}} $|$ \emph{Flutter, Dart, cross-platform application for Windows/MacOS/Linux}}{Май 6, 2023}
+          \resumeItemListStart
+            \resumeItem{Используется алгоритм обратного отслеживания для проверки решений}
+            \resumeItem{Личный проект в образовательных целях}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/notepad-shell}{\underline{\textbf{Notepad Shell}}} $|$ \emph{C\#, Windows Forms}}{Март 21, 2023}
+          \resumeItemListStart
+            \resumeItem{Программа представляет собой текстовый блокнот для работы с текстовыми документами}
+            \resumeItem{Задача из курса "Программирование на C\#"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/fp-compiler-lab-mosmetro}{\underline{\textbf{The New Programming Language with its own Interpreter}}} $|$ \emph{F\#, FParsec}}{Декабрь 10, 2023}
+          \resumeItemListStart
+            \resumeItem{Язык и интерпретатор были разработаны командой из трех человек, включая меня. Все получили оценку 9}
+            \resumeItem{Моя роль: разработчик интерпретатора, тестировщик интерпретатора, редактор документации}
+            \resumeItem{Задача из курса "Функциональное и логическое программирование на F\# и Prolog"}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {\href{https://github.com/lkhorasandzhian/research-project}{\underline{\textbf{Research Project}}} $|$ \emph{Python, Data Analysis, Web Scrapping}}{Июль 1, 2022}
+          \resumeItemListStart
+            \resumeItem{Анализ данных по маркетинговой стратегии банка и веб-скрейпинг сайта nike.com}
+            \resumeItem{Задача из курса "Анализ данных на Python"}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%---------competitions-------------
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Технические навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Языки}{: \textbf{C\#}, \textbf{Java}, \textbf{C++}, Python, Dart} \\
+     \textbf{Фреймворки}{: .NET, Flutter, Spring, JUnit} \\
+     \textbf{Инструменты разработчика}{: Git, IntelliJ IDEA, CLion, VS Code, Visual Studio, Postman, Visual Paradigm, Jupyter Notebook} \\
+     \textbf{Библиотеки}{: Pandas, NumPy, SymPy, Matplotlib, Seaborn, LINQ}
+    }}
+ \end{itemize}
+
+%------------LANGUAGES
+\section{Языки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Английский}{: B2} \\
+     \textbf{Русский}{: Native}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
