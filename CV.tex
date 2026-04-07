@@ -1,8 +1,6 @@
 %-------------------------
 % Resume in Latex
 % Author : Levon Khorasandzhian
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -16,8 +14,11 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
 \usepackage{tabularx}
+\setlength{\footskip}{4.08003pt}
 \input{glyphtounicode}
 
 
@@ -32,14 +33,12 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -52,19 +51,17 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-4pt}}
   }
 }
 
@@ -102,14 +99,7 @@
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
-
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
 \begin{center}
     \textbf{\Huge \scshape Levon Khorasandzhian} \\ \vspace{1pt}
@@ -118,27 +108,24 @@
     \href{https://github.com/lkhorasandzhian}{\underline{github.com/lkhorasandzhian}}
 \end{center}
 
-
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Higher School of Economics}{Moscow, Russia}
-      {Bachelor of Computer Science, Software Engineering}{August 2021 -- Jule 2025}
+      {B.Sc. in Computer Science, Software Engineering}{Aug 2021 -- Jul 2025}
     \resumeSubSubheading
-      {Master of Computer Science, Data Engineering}{October 2025 -- Jule 2027}
+      {M.Sc. in Computer Science, Data Engineering}{Oct 2025 -- Jul 2027}
       \resumeItem
-    {\textbf{Main Courses (GPA 8.05/10)}:
+    {\textbf{Relevant Coursework (GPA 8.05/10)}:
     \begin{enumerate}
         \item Algorithms and Data Structures
-        \item Software Systems Architecture Design
+        \item Software Systems Architecture
         \item C\# Programming
+        \item Java Software Engineering
         \item Distributed Databases and Data Warehouses
-        \item Industrial Development Tools
-        \item Operation Systems
-        \item Computer System Architecture
+        \item Software Development Tools
         \item Software Quality Assurance and Testing
-        \item Data Analysis in Python
     \end{enumerate}
     }
   \resumeSubHeadingListEnd
@@ -146,66 +133,63 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/aton-web-api}{\underline{\textbf{Aton Web API}}} $|$ \emph{C\#, ASP.Net Core 8.0}}{August 1, 2024}
-          \resumeItemListStart
-            \resumeItem{Web service on .NET Core 8.0, implementing API CRUD methods on the Users entity, access to the API is carried out through the Swagger interface}
-          \resumeItemListEnd
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\underline{\textbf{Restaurant Order Processing System}}} $|$ \emph{Java, Spring, JavaDoc}}{May 29, 2023}
-          \resumeItemListStart
-            \resumeItem{Consists of two microservices: authorization microservice \& order processing microservice}
-            \resumeItem{Task from course "Software Design"}
-          \resumeItemListEnd
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/kpo-gym}{\underline{\textbf{Gym Manager}}} $|$ \emph{Java, Spring}}{June 17, 2023}
-          \resumeItemListStart
-            \resumeItem{API for managing gym workouts}
-            \resumeItem{Task from course "Software Design"}
-          \resumeItemListEnd
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/valid_sudoku}{\underline{\textbf{Valid Sudoku}}} $|$ \emph{Flutter, Dart, cross-platform application for Windows/MacOS/Linux}}{May 6, 2023}
-          \resumeItemListStart
-            \resumeItem{Backtracking algorithm is used to find solutions to a user task during validation process}
-            \resumeItem{Personal project for educational purposes}
-          \resumeItemListEnd
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/notepad-shell}{\underline{\textbf{Notepad Shell}}} $|$ \emph{C\#, Windows Forms}}{March 21, 2023}
-          \resumeItemListStart
-            \resumeItem{The program is a text notepad for working with text documents}
-            \resumeItem{Task from course "C\# Programming"}
-          \resumeItemListEnd
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/fp-compiler-lab-mosmetro}{\underline{\textbf{The New Programming Language with its own Interpreter}}} $|$ \emph{F\#, FParsec}}{December 10, 2023}
-          \resumeItemListStart
-            \resumeItem{Language and Interpreter were developed by a team of three people including me. We all got 9 grades}
-            \resumeItem{My role: the creator of interpreter \& tester of interpreter \& editor of documentation}
-            \resumeItem{Task from course "Functional and Logic Programming in F\# and Prolog"}
-          \resumeItemListEnd
-          \resumeProjectHeading
-          {\href{https://github.com/lkhorasandzhian/research-project}{\underline{\textbf{Research Project}}} $|$ \emph{Python, Data Analysis, Web Scrapping}}{July 1, 2022}
-          \resumeItemListStart
-            \resumeItem{Bank marketing strategy data analysis and web-scraping of nike.com}
-            \resumeItem{Task from course "Data analysis in Python"}
-          \resumeItemListEnd
+      \resumeProjectHeading
+        {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring, PostgreSQL, Docker, Swagger, AOP, Web MVC}}{Nov 2025}
+        \resumeItemListStart
+          \resumeItem{Developed a REST API for a marketplace system with authentication, role-based access control, and authorization}
+          \resumeItem{Implemented data storage using PostgreSQL with Docker-based containerization}
+          \resumeItem{Documented API using Swagger and Javadoc}
+          \resumeItem{Implemented cross-cutting concerns (logging, validation, security) using Spring AOP}
+          \resumeItem{Evolved project across 5 iterations: from console app and servlets to full Spring MVC application}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\href{https://github.com/lkhorasandzhian/aton-web-api}{\underline{\textbf{Aton Web API}}} $|$ \emph{C\#, ASP.NET Core 8.0}}{Aug 2024}
+        \resumeItemListStart
+          \resumeItem{Built a Web API service implementing CRUD operations for User entities}
+          \resumeItem{Integrated Swagger UI for API interaction and testing}
+          \resumeItem{Implemented authentication for secured endpoints}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\underline{\textbf{Restaurant Order Processing System}}} $|$ \emph{Java, Spring, H2, Postman}}{May 2023}
+        \resumeItemListStart
+          \resumeItem{Designed backend system based on microservices architecture}
+          \resumeItem{Implemented two microservices: authentication and order management}
+          \resumeItem{Designed REST APIs for user registration, authentication, role management, and menu handling}
+          \resumeItem{Used in-memory H2 database for data storage}
+          \resumeItem{Prepared API testing collections using Postman}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\href{https://github.com/lkhorasandzhian/notepad-shell}{\underline{\textbf{Notepad Shell}}} $|$ \emph{C\#, Windows Forms}}{Mar 2023}
+        \resumeItemListStart
+          \resumeItem{Developed desktop text editor application}
+          \resumeItem{Implemented file operations and customizable UI themes}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\href{https://github.com/lkhorasandzhian/valid_sudoku}{\underline{\textbf{Valid Sudoku}}} $|$ \emph{Dart, Flutter}}{May 2023}
+        \resumeItemListStart
+          \resumeItem{Built cross-platform desktop application (Windows, macOS, Linux)}
+          \resumeItem{Implemented puzzle generation with multiple difficulty levels}
+          \resumeItem{Developed solution validation using recursive backtracking algorithm}
+        \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-
-%---------competitions-------------
-
-%
-%-----------PROGRAMMING SKILLS-----------
+%-----------SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: \textbf{C\#}, \textbf{Java}, \textbf{C++}, Python, Dart} \\
-     \textbf{Frameworks}{: ASP.NET Core, Entity Framework Core, .NET, Flutter, Spring, JUnit} \\
-     \textbf{Developer Tools}{: Git, IntelliJ IDEA, CLion, VS Code, Visual Studio, Postman, Visual Paradigm, Jupyter Notebook} \\
-     \textbf{Libraries}{: Pandas, NumPy, SymPy, Matplotlib, Seaborn, LINQ}
+     \textbf{Languages}{: Java, C\#} \\
+     \textbf{Frameworks}{: Spring (Core, Web MVC, REST, Security, AOP) · .NET (ASP.NET Core, Web API, EF Core, LINQ, DI)} \\
+     \textbf{Databases}{: PostgreSQL, MySQL, MongoDB} \\
+     \textbf{Tools}{: Git, Docker, Postman, WSL, VirtualBox, Visual Paradigm} \\
+     \textbf{Testing}{: JUnit 5, xUnit, Mockito, Testcontainers}
     }}
  \end{itemize}
 
-%------------LANGUAGES
+%-----------LANGUAGES-----------
 \section{Languages}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
@@ -214,5 +198,4 @@
     }}
  \end{itemize}
 
-%-------------------------------------------
 \end{document}
