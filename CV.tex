@@ -102,9 +102,12 @@
 \begin{document}
 
 \begin{center}
-    \textbf{\Huge \scshape Levon Khorasandzhian} \\ \vspace{1pt}
-    \href{mailto:levon.kh228@gmail.com}{\underline{levon.kh228@gmail.com}} $|$ 
+    \textbf{\Huge \scshape Levon Khorasandzhian} \\ \vspace{2pt}
+    \small Backend Developer $|$ C\# / Java \\ \vspace{1pt}
+    \small Moscow, Russia $|$ Open to onsite, hybrid, and remote roles \\ \vspace{1pt}
+    \href{mailto:lakhorasandzhyan@edu.hse.ru}{\underline{lakhorasandzhyan@edu.hse.ru}} $|$ 
     \href{https://t.me/yungflaeva}{\underline{t.me/yungflaeva}} $|$
+    \href{tel:+79160171926}{\underline{+7 916 017-19-26}} $|$
     \href{https://github.com/lkhorasandzhian}{\underline{github.com/lkhorasandzhian}}
 \end{center}
 
@@ -116,23 +119,27 @@
       {B.Sc. in Computer Science, Software Engineering}{Aug 2021 -- Jul 2025}
     \resumeSubSubheading
       {M.Sc. in Computer Science, Data Engineering}{Oct 2025 -- Jul 2027}
-      \resumeItem
-    {\textbf{Relevant Coursework (GPA 8.05/10)}:
-    \begin{enumerate}
-        \item Algorithms and Data Structures
-        \item Software Systems Architecture
-        \item C\# Programming
-        \item Java Software Engineering
-        \item Distributed Databases and Data Warehouses
-        \item Software Development Tools
-        \item Software Quality Assurance and Testing
-    \end{enumerate}
+    \resumeItem{
+        \textbf{Relevant Coursework (GPA: 8.5/10)}: Algorithms and Data Structures, Software Systems Architecture, C\# Programming, Java Software Engineering, Distributed Databases and Data Warehouses, Software Development Tools, Software Quality Assurance and Testing
     }
+
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\href{https://github.com/lkhorasandzhian/room-booking-service}{\underline{\textbf{Room Booking Service}}} $|$ \emph{C\#, ASP.NET Core 10, PostgreSQL, Docker, Swagger, JWT, CI, Testing}}{Apr 2026}
+        \resumeItemListStart
+          \resumeItem{Built a REST API for meeting room booking with room management, availability schedules, slot generation, booking creation, cancellation, and admin booking overview}
+          \resumeItem{Implemented JWT authentication and role-based access control for admin and user workflows}
+          \resumeItem{Designed persistence layer using Entity Framework Core, PostgreSQL, migrations, and Docker Compose-based local infrastructure}
+          \resumeItem{Implemented automatic 30-minute slot generation from room schedules and idempotent booking cancellation logic}
+          \resumeItem{Covered core business flows with unit and integration tests using xUnit, FluentAssertions, and PostgreSQL Testcontainers}
+          \resumeItem{Configured GitHub Actions CI pipeline to restore, build, run unit and integration tests, and execute load tests against PostgreSQL-backed API}
+          \resumeItem{Added Swagger documentation, Makefile automation, database seed scripts, and NBomber load tests with latency and success-rate thresholds}
+        \resumeItemListEnd
+
       \resumeProjectHeading
         {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring, PostgreSQL, Docker, Swagger, AOP, Web MVC}}{Nov 2025}
         \resumeItemListStart
@@ -152,20 +159,13 @@
         \resumeItemListEnd
 
       \resumeProjectHeading
-        {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\underline{\textbf{Restaurant Order Processing System}}} $|$ \emph{Java, Spring, H2, Postman}}{May 2023}
+        {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\underline{\textbf{Restaurant Order Processing System}}} $|$ \emph{Java, Spring, H2, Postman}}{June 2023}
         \resumeItemListStart
           \resumeItem{Designed backend system based on microservices architecture}
           \resumeItem{Implemented two microservices: authentication and order management}
           \resumeItem{Designed REST APIs for user registration, authentication, role management, and menu handling}
           \resumeItem{Used in-memory H2 database for data storage}
           \resumeItem{Prepared API testing collections using Postman}
-        \resumeItemListEnd
-
-      \resumeProjectHeading
-        {\href{https://github.com/lkhorasandzhian/notepad-shell}{\underline{\textbf{Notepad Shell}}} $|$ \emph{C\#, Windows Forms}}{Mar 2023}
-        \resumeItemListStart
-          \resumeItem{Developed desktop text editor application}
-          \resumeItem{Implemented file operations and customizable UI themes}
         \resumeItemListEnd
 
       \resumeProjectHeading
@@ -184,7 +184,7 @@
      \textbf{Languages}{: Java, C\#} \\
      \textbf{Frameworks}{: Spring (Core, Web MVC, REST, Security, AOP) · .NET (ASP.NET Core, Web API, EF Core, LINQ, DI)} \\
      \textbf{Databases}{: PostgreSQL, MySQL, MongoDB} \\
-     \textbf{Tools}{: Git, Docker, Postman, WSL, VirtualBox, Visual Paradigm} \\
+     \textbf{Tools}{: Git, Docker, WSL, Linux, Postman, VirtualBox, Visual Paradigm} \\
      \textbf{Testing}{: JUnit 5, xUnit, Mockito, Testcontainers}
     }}
  \end{itemize}
