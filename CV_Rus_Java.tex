@@ -1,0 +1,77 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Levon Khorasandzhian
+% Track: Java Backend
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{cvstyle}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Левон Хорасанджян} \\ \vspace{2pt}
+    \small Backend-разработчик \resumeSeparator{} Java \\ \vspace{1pt}
+    \small Москва, Россия \resumeSeparator{} Рассматриваю офис, гибрид и удаленный формат \\ \vspace{1pt}
+    \resumeLink{mailto:lakhorasandzhyan@edu.hse.ru}{lakhorasandzhyan@edu.hse.ru} \resumeSeparator{}
+    \resumeLink{https://t.me/yungflaeva}{t.me/yungflaeva} \resumeSeparator{}
+    \resumeLink{tel:+79160171926}{+7 916 017-19-26} \resumeSeparator{}
+    \resumeLink{https://github.com/lkhorasandzhian}{github.com/lkhorasandzhian}
+\end{center}
+
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Высшая школа экономики}{Москва, Россия}
+      {Бакалавриат Факультета Компьютерных Наук, программная инженерия}{Авг 2021 -- Июл 2025}
+    \resumeSubSubheading
+      {Магистратура Факультета Компьютерных Наук, инженерия данных}{Окт 2025 -- Июл 2027}
+    \resumeItem{
+      \textbf{Релевантные курсы (GPA: 8.5/10)}: Алгоритмы и структуры данных, Проектирование архитектуры программных систем, Программирование на C\#, Конструирование программного обеспечения (Java), Распределенные базы и хранилища данных, Нереляционные базы данных, Архитектура вычислительных систем, Разработка и анализ требований, Инструменты разработки ПО, Контроль качества ПО и тестирование
+    }
+  \resumeSubHeadingListEnd
+
+\section{Проекты}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring, PostgreSQL, Docker, Swagger, AOP, Web MVC}}{Ноя 2025}
+      \resumeItemListStart
+        \resumeItem{Разработал REST API для marketplace-системы с аутентификацией, ролями и авторизацией}
+        \resumeItem{Реализовал хранение данных в PostgreSQL с Docker-based контейнеризацией}
+        \resumeItem{Документировал API с помощью Swagger и Javadoc}
+        \resumeItem{Реализовал cross-cutting concerns (логирование, валидация, безопасность) с использованием Spring AOP}
+        \resumeItem{Развил проект за 5 итераций: от консольного приложения и сервлетов до полноценного Spring MVC приложения}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/restaurant-order-processing-system}{\underline{\textbf{Restaurant Order Processing System}}} $|$ \emph{Java, Spring, H2, Postman}}{Июн 2023}
+      \resumeItemListStart
+        \resumeItem{Спроектировал backend-систему на основе микросервисной архитектуры}
+        \resumeItem{Реализовал два микросервиса: аутентификация и управление заказами}
+        \resumeItem{Создал REST API для регистрации пользователей, аутентификации, управления ролями и работы с меню}
+        \resumeItem{Использовал in-memory H2 database для хранения данных}
+        \resumeItem{Подготовил Postman-коллекции для тестирования API}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Технические навыки}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{Язык}{Java} \\
+      \resumeSkill{Фреймворки}{Spring Core, Web MVC, REST, Security, AOP} \\
+      \resumeSkill{Базы данных}{PostgreSQL, H2} \\
+      \resumeSkill{Инструменты}{Git, Docker, Docker Compose, Linux, Postman, Swagger, Javadoc} \\
+      \resumeSkill{Тестирование}{JUnit 5, Mockito}
+    }}
+  \end{itemize}
+
+\section{Языки}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{Английский}{B2} \\
+      \resumeSkill{Русский}{Родной}
+    }}
+  \end{itemize}
+
+\end{document}

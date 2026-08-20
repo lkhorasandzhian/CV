@@ -1,0 +1,77 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Levon Khorasandzhian
+% Track: .NET Backend
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{cvstyle}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Levon Khorasandzhian} \\ \vspace{2pt}
+    \small Backend Developer \resumeSeparator{} .NET / C\# \\ \vspace{1pt}
+    \small Moscow, Russia \resumeSeparator{} Open to onsite, hybrid, and remote roles \\ \vspace{1pt}
+    \resumeLink{mailto:lakhorasandzhyan@edu.hse.ru}{lakhorasandzhyan@edu.hse.ru} \resumeSeparator{}
+    \resumeLink{https://t.me/yungflaeva}{t.me/yungflaeva} \resumeSeparator{}
+    \resumeLink{tel:+79160171926}{+7 916 017-19-26} \resumeSeparator{}
+    \resumeLink{https://github.com/lkhorasandzhian}{github.com/lkhorasandzhian}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Higher School of Economics}{Moscow, Russia}
+      {B.Sc. in Computer Science, Software Engineering}{Aug 2021 -- Jul 2025}
+    \resumeSubSubheading
+      {M.Sc. in Computer Science, Data Engineering}{Oct 2025 -- Jul 2027}
+    \resumeItem{
+      \textbf{Relevant Coursework (GPA: 8.5/10)}: Algorithms and Data Structures, Software Systems Architecture, C\# Programming, Software Construction (Java), Distributed Databases and Data Warehouses, NoSQL Databases, Computer Architecture, Requirements Engineering, Software Development Tools, Software Quality Assurance and Testing
+    }
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/room-booking-service}{\underline{\textbf{Room Booking Service}}} $|$ \emph{C\#, ASP.NET Core 10, PostgreSQL, Docker, Swagger, JWT, CI, Testing}}{Apr 2026}
+      \resumeItemListStart
+        \resumeItem{Built a REST API for meeting room booking with room management, availability schedules, slot generation, booking creation, cancellation, and admin booking overview}
+        \resumeItem{Implemented JWT authentication and role-based access control for admin and user workflows}
+        \resumeItem{Designed persistence layer using Entity Framework Core, PostgreSQL, migrations, and Docker Compose-based local infrastructure}
+        \resumeItem{Implemented automatic 30-minute slot generation from room schedules and idempotent booking cancellation logic}
+        \resumeItem{Covered core business flows with unit and integration tests using xUnit, FluentAssertions, and PostgreSQL Testcontainers}
+        \resumeItem{Configured GitHub Actions CI pipeline to restore, build, run unit and integration tests, and execute load tests against PostgreSQL-backed API}
+        \resumeItem{Added Swagger documentation, Makefile automation, database seed scripts, and NBomber load tests with latency and success-rate thresholds}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/aton-web-api}{\underline{\textbf{Aton Web API}}} $|$ \emph{C\#, ASP.NET Core 8.0}}{Aug 2024}
+      \resumeItemListStart
+        \resumeItem{Built a Web API service implementing CRUD operations for User entities}
+        \resumeItem{Integrated Swagger UI for API interaction and testing}
+        \resumeItem{Implemented authentication for secured endpoints}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{Language}{C\#} \\
+      \resumeSkill{Frameworks}{ASP.NET Core, Web API, Entity Framework Core, LINQ, Dependency Injection} \\
+      \resumeSkill{Database}{PostgreSQL} \\
+      \resumeSkill{Tools}{Git, Docker, Docker Compose, GitHub Actions, Linux, Postman, Swagger, Make} \\
+      \resumeSkill{Testing}{xUnit, FluentAssertions, Testcontainers, NBomber}
+    }}
+  \end{itemize}
+
+\section{Languages}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{English}{B2} \\
+      \resumeSkill{Russian}{Native}
+    }}
+  \end{itemize}
+
+\end{document}
