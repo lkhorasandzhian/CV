@@ -1,0 +1,77 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Levon Khorasandzhian
+% Track: Java Backend
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{../cvstyle}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Levon Khorasandzhian} \\ \vspace{2pt}
+    \small Backend Developer \resumeSeparator{} Java \\ \vspace{1pt}
+    \small Moscow, Russia \resumeSeparator{} Open to onsite, hybrid, and remote roles \\ \vspace{1pt}
+    \resumeLink{mailto:lakhorasandzhyan@edu.hse.ru}{lakhorasandzhyan@edu.hse.ru} \resumeSeparator{}
+    \resumeLink{https://t.me/yungflaeva}{t.me/yungflaeva} \resumeSeparator{}
+    \resumeLink{tel:+79160171926}{+7 916 017-19-26} \resumeSeparator{}
+    \resumeLink{https://github.com/lkhorasandzhian}{github.com/lkhorasandzhian}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Higher School of Economics}{Moscow, Russia}
+      {B.Sc. in Computer Science, Software Engineering}{Aug 2021 -- Jul 2025}
+    \resumeSubSubheading
+      {M.Sc. in Computer Science, Data Engineering}{Oct 2025 -- Jul 2027}
+    \resumeItem{
+      \textbf{Relevant Coursework (GPA: 8.5/10)}: Algorithms and Data Structures, Software Systems Architecture, C\# Programming, Software Construction (Java), Distributed Databases and Data Warehouses, NoSQL Databases, Computer Architecture, Requirements Engineering, Software Development Tools, Software Quality Assurance and Testing
+    }
+  \resumeSubHeadingListEnd
+
+\section{Practical Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://yandex.ru/yaintern/schools/backend}{Yandex Backend Development Summer School}}{Moscow, Russia}
+      {Team business project ``Advertising Campaign Auditor''}{Jul 1 -- Aug 31, 2026}
+    \resumeItem{As a team, developed an advertising campaign audit service that aggregates data from Yandex Direct and Yandex Metrica, detects business rule violations, and generates recommendations. Designed the API and modular architecture and implemented external data integrations, error handling, logging, and tests for the core logic. At the final stage, the generated report is processed by a neural network model to improve the structure and readability of the recommendations}
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring Boot, Spring MVC, Spring Security, PostgreSQL, Docker}}{Nov 2025}
+      \resumeItemListStart
+        \resumeItem{Progressively evolved Product Catalog Service from a console Java application with file serialization into a multi-module Spring Boot REST service with dedicated controller, service, and repository layers}
+        \resumeItem{Implemented a REST API for CRUD operations, partial updates, product search and filtering, user registration and login, role-based operation restrictions, and audit log retrieval}
+        \resumeItem{Migrated persistence to PostgreSQL: developed JDBC repositories using \texttt{PreparedStatement} and HikariCP, implemented database-generated identifiers, and configured Liquibase migrations to create schemas, tables, and initial data automatically}
+        \resumeItem{Implemented Jakarta Bean Validation, DTO mapping with MapStruct, unified REST error responses through \texttt{@RestControllerAdvice}, and an LRU search-result cache with invalidation after catalog changes}
+        \resumeItem{Automated action auditing and service execution-time measurement with Spring AOP; extracted this functionality into custom \texttt{audit-starter} and \texttt{logging-starter} modules with conditional auto-configuration and an enabling annotation}
+        \resumeItem{Added JDBC integration tests with PostgreSQL, Testcontainers, and Liquibase, as well as WebMvc tests for REST controllers using MockMvc and Mockito; integrated Swagger UI and Docker Compose for the local database}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{Java Core}{Collections, Generics, Stream API, Exceptions, Concurrency} \\
+      \resumeSkill{Backend}{Spring Framework, Spring Core, Spring Boot, Spring Data, Spring MVC, Spring Web, Spring Security, AOP, JDBC, JPA, ORM, Hibernate} \\
+      \resumeSkill{Databases}{PostgreSQL, MS SQL Server, MongoDB} \\
+      \resumeSkill{Build Tools}{Apache Maven, Gradle} \\
+      \resumeSkill{Tools}{Git, Docker, Linux, Postman, Swagger, Javadoc, Yandex Cloud} \\
+      \resumeSkill{Testing}{JUnit 5, AssertJ, Mockito, Testcontainers}
+    }}
+  \end{itemize}
+
+\section{Languages}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{English}{B2} \\
+      \resumeSkill{Russian}{Native}
+    }}
+  \end{itemize}
+
+\end{document}
