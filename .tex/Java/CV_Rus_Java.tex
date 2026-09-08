@@ -29,22 +29,27 @@
     \resumeItem{
       \textbf{Релевантные курсы (GPA: 8.5/10)}: Алгоритмы и структуры данных, Проектирование архитектуры программных систем, Программирование на C\#, Конструирование программного обеспечения (Java), Распределенные базы и хранилища данных, Нереляционные базы данных, Архитектура вычислительных систем, Разработка и анализ требований, Инструменты разработки ПО, Контроль качества ПО и тестирование
     }
+  \resumeSubHeadingListEnd
+
+\section{Практический опыт}
+  \resumeSubHeadingListStart
     \resumeSubheading
       {\href{https://yandex.ru/yaintern/schools/backend}{Летняя школа бэкенд-разработки Яндекса}}{Москва, Россия}
-      {Командный бизнес-проект «Аудитор рекламных кампаний»}{1 июля -- 31 августа}
-    \resumeItem{Создали сервис для Яндекс Директа и Яндекс Метрики, который собирает данные из Директа и других источников, проверяет их по бизнес-правилам и формирует список выявленных проблем с рекомендациями}
+      {Командный бизнес-проект «Аудитор рекламных кампаний»}{1 июля -- 31 августа 2026}
+    \resumeItem{В составе команды разработали сервис для аудита рекламных кампаний, который агрегирует данные Яндекс Директа и Яндекс Метрики, выявляет нарушения бизнес-правил и формирует рекомендации. Спроектировали API и модульную архитектуру, реализовали интеграции с внешними источниками, обработку ошибок, логирование и тестирование ключевой логики. На заключительном этапе сформированный отчёт обрабатывается нейросетевой моделью для улучшения структуры и читаемости рекомендаций}
   \resumeSubHeadingListEnd
 
 \section{Проекты}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring, PostgreSQL, Docker, Swagger, AOP, Web MVC}}{Ноя 2025}
+      {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring Boot, Spring MVC, Spring Security, PostgreSQL, Docker}}{Ноя 2025}
       \resumeItemListStart
-        \resumeItem{Разработал REST API для marketplace-системы с аутентификацией, ролями и авторизацией}
-        \resumeItem{Реализовал хранение данных в PostgreSQL с Docker-based контейнеризацией}
-        \resumeItem{Документировал API с помощью Swagger и Javadoc}
-        \resumeItem{Реализовал cross-cutting concerns (логирование, валидация, безопасность) с использованием Spring AOP}
-        \resumeItem{Развил проект за 5 итераций: от консольного приложения и сервлетов до полноценного Spring MVC приложения}
+        \resumeItem{Последовательно развил Product Catalog Service от консольного Java-приложения с файловой сериализацией до многомодульного Spring Boot REST-сервиса с выделенными слоями controller, service и repository}
+        \resumeItem{Реализовал REST API для CRUD-операций, частичного обновления, поиска и фильтрации товаров, регистрации и входа пользователей, ролевого ограничения операций и просмотра журнала аудита}
+        \resumeItem{Перевёл хранение данных на PostgreSQL: разработал JDBC-репозитории с \texttt{PreparedStatement} и HikariCP, реализовал генерацию идентификаторов средствами БД; настроил миграции Liquibase для автоматического создания схем, таблиц и начальных данных}
+        \resumeItem{Реализовал Jakarta Bean Validation, преобразование DTO через MapStruct, единый формат REST-ошибок через \texttt{@RestControllerAdvice} и LRU-кэш результатов поиска с инвалидацией при изменении каталога}
+        \resumeItem{Автоматизировал аудит действий и измерение времени работы сервисов через Spring AOP; вынес эту функциональность в собственные \texttt{audit-starter} и \texttt{logging-starter} с условной автоконфигурацией и аннотацией включения}
+        \resumeItem{Добавил интеграционное тестирование JDBC с PostgreSQL, Testcontainers и Liquibase, а также WebMvc-тесты REST-контроллеров с MockMvc и Mockito; подключил Swagger UI и Docker Compose для локальной БД}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -52,7 +57,8 @@
 \section{Технические навыки}
   \begin{itemize}[leftmargin=0.15in,label={}]
     \small{\item{
-      \resumeSkill{Фреймворки и технологии}{Spring Framework, Spring Core, Spring Boot, Spring Data, Spring MVC, Spring Web, Spring Security, AOP, JDBC, JPA, ORM, Hibernate} \\
+      \resumeSkill{Java Core}{Collections, Generics, Stream API, Exceptions, Concurrency} \\
+      \resumeSkill{Backend}{Spring Framework, Spring Core, Spring Boot, Spring Data, Spring MVC, Spring Web, Spring Security, AOP, JDBC, JPA, ORM, Hibernate} \\
       \resumeSkill{Базы данных}{PostgreSQL, MS SQL Server, MongoDB} \\
       \resumeSkill{Сборка}{Apache Maven, Gradle} \\
       \resumeSkill{Инструменты}{Git, Docker, Linux, Postman, Swagger, Javadoc, Yandex Cloud} \\
