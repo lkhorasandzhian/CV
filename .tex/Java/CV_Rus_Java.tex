@@ -42,14 +42,15 @@
 \section{Проекты}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring Boot, Spring MVC, Spring Security, PostgreSQL, Docker}}{Ноя 2025}
+      {\href{https://github.com/lkhorasandzhian/ylab-university}{\underline{\textbf{Product Catalog Service}}} $|$ \emph{Java, Spring Boot, Spring MVC, JDBC, Liquibase, PostgreSQL, Docker}}{Ноя 2025}
       \resumeItemListStart
         \resumeItem{Последовательно развил Product Catalog Service от консольного Java-приложения с файловой сериализацией до многомодульного Spring Boot REST-сервиса с выделенными слоями controller, service и repository}
-        \resumeItem{Реализовал REST API для CRUD-операций, частичного обновления, поиска и фильтрации товаров, регистрации и входа пользователей, ролевого ограничения операций и просмотра журнала аудита}
-        \resumeItem{Перевёл хранение данных на PostgreSQL: разработал JDBC-репозитории с \texttt{PreparedStatement} и HikariCP, реализовал генерацию идентификаторов средствами БД; настроил миграции Liquibase для автоматического создания схем, таблиц и начальных данных}
-        \resumeItem{Реализовал Jakarta Bean Validation, преобразование DTO через MapStruct, единый формат REST-ошибок через \texttt{@RestControllerAdvice} и LRU-кэш результатов поиска с инвалидацией при изменении каталога}
-        \resumeItem{Автоматизировал аудит действий и измерение времени работы сервисов через Spring AOP; вынес эту функциональность в собственные \texttt{audit-starter} и \texttt{logging-starter} с условной автоконфигурацией и аннотацией включения}
-        \resumeItem{Добавил интеграционное тестирование JDBC с PostgreSQL, Testcontainers и Liquibase, а также WebMvc-тесты REST-контроллеров с MockMvc и Mockito; подключил Swagger UI и Docker Compose для локальной БД}
+        \resumeItem{Реализовал REST API для CRUD-операций, частичного обновления, поиска и фильтрации товаров, регистрации и входа пользователей, базовых проверок ролей в контроллерах и просмотра журнала аудита}
+        \resumeItem{Перевёл хранение данных на PostgreSQL: разработал JDBC-репозитории с \texttt{PreparedStatement} и HikariCP, реализовал генерацию идентификаторов средствами БД; настроил автоматическое создание схем SQL-скриптом при инициализации PostgreSQL и миграции Liquibase для создания таблиц, последовательностей и начальных данных}
+        \resumeItem{Добавил валидацию входных DTO через Jakarta Bean Validation, преобразование моделей в DTO через MapStruct, обработку исключений через \texttt{@RestControllerAdvice} и LRU-кэш результатов поиска с инвалидацией при изменении каталога}
+        \resumeItem{Автоматизировал аудит действий и измерение времени выполнения методов сервисов через Spring AOP; вынес аудит в собственный \texttt{audit-starter} с условной автоконфигурацией, а логирование --- в \texttt{logging-starter}, подключаемый через \texttt{@EnableLogging}}
+        \resumeItem{На этапе JDBC добавил интеграционный тест репозитория товаров с PostgreSQL, Testcontainers и Liquibase; при переходе на Spring добавил WebMVC-тесты контроллеров с MockMvc и Mockito}
+        \resumeItem{Подключил Swagger UI для просмотра документации и ручного тестирования REST API; настроил запуск локальной PostgreSQL через Docker Compose}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
