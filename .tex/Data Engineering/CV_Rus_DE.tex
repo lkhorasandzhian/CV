@@ -1,0 +1,91 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Levon Khorasandzhian
+% Track: Data Engineer Internship -- Sber
+% Compile with pdfLaTeX. The original cvstyle.sty is used unchanged.
+% Supports cvstyle.sty beside this file or in its parent directory.
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+\IfFileExists{cvstyle.sty}{\usepackage{cvstyle}}{\usepackage{../cvstyle}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Левон Хорасанджян} \\ \vspace{2pt}
+    \small Data Engineer \resumeSeparator{} Python, SQL \\ \vspace{1pt}
+    \small Москва, Россия \resumeSeparator{} Рассматриваю офис, гибрид и удаленный формат \\ \vspace{1pt}
+    \resumeLink{mailto:lakhorasandzhyan@edu.hse.ru}{lakhorasandzhyan@edu.hse.ru} \resumeSeparator{}
+    \resumeLink{https://t.me/yungflaeva}{t.me/yungflaeva} \resumeSeparator{}
+    \resumeLink{tel:+79160171926}{+7 916 017-19-26} \\ \vspace{1pt}
+    \resumeLink{https://github.com/lkhorasandzhian}{github.com/lkhorasandzhian}
+\end{center}
+
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Высшая школа экономики}{Москва, Россия}
+      {Бакалавриат ФКН, программная инженерия}{Авг 2021 -- Июл 2025}
+    \resumeSubSubheading
+      {Магистратура ФКН, инженерия данных}{Окт 2025 -- Июл 2027}
+    \resumeItem{
+      \textbf{Релевантные курсы (GPA: 8.5/10)}: Алгоритмы и структуры данных, Проектирование архитектуры программных систем, Программирование на C\#, Конструирование программного обеспечения (Java), Распределенные базы и хранилища данных, Нереляционные базы данных, Архитектура вычислительных систем, Разработка и анализ требований, Инструменты разработки ПО, Контроль качества ПО и тестирование
+    }
+  \resumeSubHeadingListEnd
+
+\section{Практический опыт}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://yandex.ru/yaintern/schools/backend}{Летняя школа бэкенд-разработки Яндекса}}{Москва, Россия}
+      {Командный проект «Аудитор рекламных кампаний»}{Июл -- Авг 2026}
+      \resumeItemListStart
+        \resumeItem{В составе команды разработал сервис аудита рекламных кампаний: агрегация данных Яндекс Директа и Яндекс Метрики, проверка бизнес-правил и формирование рекомендаций. Участвовал в реализации интеграций с внешними источниками, обработки ошибок, логирования и тестирования ключевой логики}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Учебные проекты по инженерии данных}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/ETL-HW-Final-module-3}{\underline{\textbf{ETL из MongoDB в PostgreSQL}}}}{\small\emph{Python, SQL, Airflow}}
+      \resumeItemListStart
+        \resumeItem{Реализовал извлечение данных из 5 коллекций MongoDB, нормализацию вложенных массивов и пакетную загрузку в 10 таблиц PostgreSQL в одной транзакции; добавил сверку количества записей в источнике и приёмнике}
+        \resumeItem{Построил 2 материализованные витрины активности пользователей и эффективности поддержки с CTE, JOIN и оконной функцией \texttt{ROW\_NUMBER}. Оформил загрузку и обновление витрин отдельными DAG Airflow; документировал структуру и запуск проекта}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/ETL-HW-Final-module-4}{\underline{\textbf{Аналитика кредитных заявок}}}}{\small\emph{Apache Spark, Apache Kafka, Yandex Cloud}}
+      \resumeItemListStart
+        \resumeItem{Разработал обработку синтетических кредитных заявок: задал схему данных, преобразование дат и заполнение пропусков; рассчитал долю одобрений и агрегаты по регионам, продуктам, уровням риска и каналам. Сохранил результаты в Parquet и подготовил дашборд DataLens}
+        \resumeItem{Реализовал разбор вложенных JSON-событий из Apache Kafka через Apache Spark с checkpoint и записью в Object Storage. Автоматизировал создание временного кластера Data Processing, запуск пакетной обработки и удаление кластера через Airflow}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/lkhorasandzhian/DE-Final-Project}{\underline{\textbf{Витрины заказов и товаров}}}}{\small\emph{Apache Spark, PostgreSQL, Airflow}}
+      \resumeItemListStart
+        \resumeItem{Построил ETL из Parquet в 7 нормализованных таблиц PostgreSQL: обработал пропуски и дубли, задал первичные и внешние ключи, ограничения CHECK и индексы для соединений и фильтрации}
+        \resumeItem{Разработал 2 аналитические витрины с показателями оборота, выручки, среднего чека и отмен; применил соединения, агрегаты и оконное ранжирование в Apache Spark. Разделил загрузку данных и расчёт витрин на DAG Airflow; настроил окружение Docker Compose}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Технические навыки}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{SQL}{JOIN, CTE, агрегатные и оконные функции, индексы, ограничения целостности} \\
+      \resumeSkill{Python}{pandas, PySpark, FastAPI; очистка, нормализация и агрегация данных} \\
+      \resumeSkill{Базы данных}{PostgreSQL, MongoDB, SQLAlchemy} \\
+      \resumeSkill{ETL}{Apache Airflow, Apache Spark, Apache Kafka; CSV, JSON, Parquet} \\
+      \resumeSkill{Облачные сервисы}{Yandex Cloud: Object Storage, Data Processing, DataTransfer} \\
+      \resumeSkill{Аналитика}{Jupyter Notebook, Yandex DataLens} \\
+      \resumeSkill{Инструменты}{Git, Docker Compose, Linux} \\
+      \resumeSkill{Java и .NET}{\textbf{уверенное владение для backend-разработки}}
+    }}
+  \end{itemize}
+
+\section{Языки}
+  \begin{itemize}[leftmargin=0.15in,label={}]
+    \small{\item{
+      \resumeSkill{Английский}{B2} \resumeSeparator{} \resumeSkill{Русский}{родной}
+    }}
+  \end{itemize}
+
+\end{document}
